@@ -1,0 +1,17 @@
+@use "_type-scale.scss" as *;
+
+:root{
+    @each $screen-size,$sizes in $type-scale{
+        @if $screen-size == sm{
+            @each $key, $value in $sizes{
+                --fs-#{$key}: #{$value};
+            }
+        }@else{
+            @media (min-width: 50em) {
+                @each $key, $value in $sizes {
+                  --fs-#{$key}: #{$value};
+                }
+            }
+        }
+    }
+}

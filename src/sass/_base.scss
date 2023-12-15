@@ -1,0 +1,114 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  //margin: $header-height 0 0 0;
+  font-family: $body-font;
+  font-size: $normal-font-size;
+  background-color: $body-color;
+  color: $text-color;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: $font-semi-bold;
+  color: $title-color;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Mixins
+
+@mixin flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@mixin subhead {
+  font-family: sans-serif;
+  color: #000;
+  font-size: $base-font-size*0.90;
+  line-height: $base-line-height*.9;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+
+  @include media($smedium) {
+      font-size: $base-font-size*1.05;
+      line-height: $base-line-height;
+  }    
+}
+
+
+
+@mixin resize($size) {
+      $result: $size;
+      @media only screen and (max-width: $large-display){
+          $result: $size * 2;
+          font-size: $result;
+      }
+      @media only screen and (max-width: $desktop){
+          $result: $size * 1.5;
+          font-size: $result;
+      }
+      @media only screen and (max-width: $laptop){
+          $result: $size * 1;
+          font-size: $result;
+      }
+      @media only screen and (max-width: $tablet){
+          $result: $size * .75;
+          font-size: $result;
+      }
+        @media only screen and (max-width: $phone) {
+          $result: $size * .5;
+          font-size: $result;
+        }
+    }
+
+
+h1 {
+  @include resize(38px);
+}
+h2 {
+  @include resize(31px);
+}
+h3 {
+  @include resize(24px);
+}
+h4 {
+  @include resize(17px);
+}
+h5 {
+  @include resize(10px);
+}
+
+
+::-webkit-scrollbar{
+  background: black;
+  max-width: 0.7rem;
+  border-radius: 1rem;
+}
+::-webkit-scrollbar-thumb{
+  background: $main-color;
+  border-radius: 1rem;
+}

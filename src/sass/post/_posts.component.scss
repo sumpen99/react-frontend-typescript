@@ -1,0 +1,68 @@
+@use "../variables";
+.Main-Post-Container{
+    height:100%;
+    width:80%;
+    margin:2rem;
+    padding:1rem;
+    box-shadow: 0rem 0rem 1rem 0.5rem variables.$main-color;
+    border-radius: 0.5rem;
+    .head-position{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        .user-info-portion{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 1rem;
+            .user-info-detail{
+                margin-left: 1rem;
+                .user-name{
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    text-align: left;
+                }
+                .post-creation-date{
+                    font-size: 0.6rem;
+                }
+            }
+        }
+        .post-description-portion{
+            font-size: 0.8rem;
+            margin-left: 0.5rem;
+        }
+    }
+    .body-portion{
+        height:100%;
+        width:100%;
+        img{
+            height:100%;
+            width:100%;
+            object-fit: contain;
+            border-radius: 0.3rem;
+            box-shadow: 0rem 0rem 0.1rem 0.1rem lightgray;
+            margin-top: 0.3rem;
+        }
+
+    }
+    #hr-post{
+        background-color: lightgray;
+        height: 1px;
+        border: none;
+        width: 98%;
+        margin: auto;
+        margin-top: 0.5rem;
+    }
+    .footer-portion{
+        display: flex;
+        justify-content: space-between;
+        padding: 0.1rem;
+        align-items: center;
+        font-size: 0.7rem;
+        .comment{
+            font-size: 0.8rem;
+            border-bottom: 1px dashed black;
+        }
+    }
+}
