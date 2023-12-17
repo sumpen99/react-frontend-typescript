@@ -90,7 +90,6 @@ const SideBar = ():React.ReactElement =>{
         </Box>
     )};
 
-
     const UserInfo = ():React.ReactElement =>{
         return(
             <Box mb="25px">
@@ -201,7 +200,6 @@ const SideBar = ():React.ReactElement =>{
             </Box>
         );
     }
-
 
     return(
         <Box sx={propsBoxContainer(colors.primary[400])}
