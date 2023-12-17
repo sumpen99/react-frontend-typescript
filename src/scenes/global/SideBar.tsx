@@ -16,6 +16,7 @@ import { HomeOutlined ,
     MenuOutlined,
     MapOutlined} from "@mui/icons-material";
 import { Theme } from "@emotion/react";
+import logo from "../../assets/tpIcon2.png";
 
 
 
@@ -94,7 +95,7 @@ const SideBar = ():React.ReactElement =>{
         return(
             <Box mb="25px">
             <Box display="flex" justifyContent="center" alignItems="center">
-            <img  width="100px" height="100px" src="../../assets/tpIcon2.png" style={{cursor:"pointer",borderRadius:"50%"}}/>
+            <img  width="100px" height="100px" src={logo} style={{cursor:"pointer",borderRadius:"50%"}}/>
             </Box>
             <Box textAlign="center">
             <Typography variant="h2" color={colors.grey[100]} fontWeight="bold" sx={{m:"10px 0 0 0"}}>

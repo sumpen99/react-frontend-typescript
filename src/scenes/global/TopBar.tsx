@@ -1,4 +1,3 @@
-//const SideBar:React.FC<UserInfoProps> = ({currentUser}):React.ReactElement =>{
 import { ColorModeContext, tokens } from "../../../theme";
 import { useContext } from "react";
 import { Box, IconButton, InputBase,useTheme } from "@mui/material";
