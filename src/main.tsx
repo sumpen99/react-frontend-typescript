@@ -13,6 +13,7 @@ import { BrowserRouter } from 'react-router-dom';
 //import './sass/main.scss';
 //import "./index.css"
 import App from './App';
+import App2 from './App2.0';
 
 
 const root = ReactDOM.createRoot(
@@ -21,7 +22,7 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <BrowserRouter>
-    <App />
+    <App2 />
   </BrowserRouter>
 );
 

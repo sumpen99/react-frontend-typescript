@@ -6,6 +6,7 @@ import IUser from "../../types/user.type";
 import "../../sass/profile/_profile.component.scss";
 import { ProfileFeeds } from './profile.feeds.component';
 import { ProfileUserInfo } from './profile.user.info.component';
+import {Avatar,Button} from "@mui/material";
 
 type IState = {
   redirect: string | null,
@@ -23,7 +24,8 @@ const Profile:React.FC = ():React.ReactElement => {
       
   const [state,setState] = useState<IState>(initialState)
 
-  const handleFollowUser = (e:React.MouseEvent<HTMLAnchorElement, MouseEvent>) =>{ e.preventDefault();}
+  //const handleFollowUser = (e:React.MouseEvent<HTMLAnchorElement, MouseEvent>) =>{ e.preventDefault();}
+  const handleFollowUser = (e:React.MouseEvent<HTMLButtonElement, MouseEvent>) =>{ e.preventDefault();}
 
   useEffect(() =>{
       const currentUser = getCurrentUser();
@@ -47,7 +49,7 @@ const Profile:React.FC = ():React.ReactElement => {
             {state.currentUser.username ?? "username"}
           </div>
           <div className="follow-user">
-            <a onClick={handleFollowUser}>+ Follow</a>
+            <Button onClick={handleFollowUser}>+ Follow</Button>
           </div>
         </div>
         <div className="bottom-portion">
@@ -58,7 +60,7 @@ const Profile:React.FC = ():React.ReactElement => {
             <ProfileUserInfo currentUser={state.currentUser}/>
           </div>
         </div>
-      {/*(state.userReady) ? <UserField/> : null*/}
+      {/*<a onClick={handleFollowUser}>+ Follow</a>(state.userReady) ? <UserField/> : null*/}
 
       </div>
     </div>

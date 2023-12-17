@@ -1,9 +1,13 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Routes,Route, Link } from "react-router-dom";
 //import "bootstrap/dist/css/bootstrap.min.css";
 //import "./App.css";
+
+
 import 'bootstrap/dist/css/bootstrap.css';
 import "./sass/_main.scss";
+import "./sass/index.scss";
+
 import {logoutUser,getCurrentUser} from "./services/auth.service";
 import IUser from './types/user.type';
 import Login from "./components/login.component";

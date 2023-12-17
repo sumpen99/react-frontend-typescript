@@ -53,8 +53,14 @@
       .follow-user{
         text-align: right;
         margin-right: 1rem;
-        margin-top: 2rem;
-        a{
+        .MuiButton-root{
+          background: variables.$main-color;
+          color: black;
+          font-size: 1.4rem;
+          border-radius: 0.5rem;
+          margin-top: 0.8rem;
+        }
+        /*a{
           padding: 1rem 2rem;
           background:variables.$main-color;
           color:black;
@@ -66,7 +72,8 @@
             box-shadow: 0rem 0.6rem 1rem -0.5rem gray;
             transform: translateY(-4px);
           }
-        }
+       
+        }*/
       }
     }
     .bottom-portion{
